@@ -8,6 +8,9 @@
 
 <?import ui.control.CPTextField?>
 <?import ui.control.CPSearchField?>
+<?import ui.control.CPIntegerField?>
+<?import ui.control.CPDecimalField?>
+
 <GridPane
     xmlns:fx="http://javafx.com/fxml"
     stylesheets="@sample.css"
@@ -26,6 +29,11 @@
         <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
         <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
         <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
@@ -63,6 +71,34 @@
         <CPSearchField
             GridPane.columnIndex="1"
             GridPane.rowIndex="5" />
+
+        <Label
+            text="CPIntegerField:"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="6"
+            GridPane.valignment="BOTTOM">
+            <padding>
+                <Insets
+                    bottom="2.0" />
+            </padding>
+        </Label>
+        <CPIntegerField
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="7" />
+
+        <Label
+            text="CPDecimalField:"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="8"
+            GridPane.valignment="BOTTOM">
+            <padding>
+                <Insets
+                    bottom="2.0" />
+            </padding>
+        </Label>
+        <CPDecimalField
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="9" />
 
     </children>
 </GridPane>
