@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import ui.control.CPTextField?>
+<?import ui.control.CPSearchField?>
+<GridPane
+    xmlns:fx="http://javafx.com/fxml"
+    stylesheets="@sample.css"
+    prefHeight="400.0"
+    prefWidth="300.0"
+    hgap="15.0">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="15.0" minWidth="15.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+        <ColumnConstraints hgrow="NEVER" maxWidth="15.0" minWidth="15.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="15.0" minHeight="15.0" vgrow="NEVER" />
+
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+
+        <RowConstraints prefHeight="28.0" minHeight="28.0" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="15.0" minHeight="15.0" vgrow="NEVER" />
+    </rowConstraints>
+    <children>
+
+        <Label
+            text="CPTextField:"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="2"
+            GridPane.valignment="BOTTOM">
+            <padding>
+                <Insets
+                    bottom="2.0" />
+            </padding>
+        </Label>
+        <CPTextField
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="3" />
+
+        <Label
+            text="CPSearchField:"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="4"
+            GridPane.valignment="BOTTOM">
+            <padding>
+                <Insets
+                    bottom="2.0" />
+            </padding>
+        </Label>
+        <CPSearchField
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="5" />
+
+    </children>
+</GridPane>
