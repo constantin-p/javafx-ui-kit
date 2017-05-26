@@ -1,6 +1,8 @@
 package ui.control;
 
 
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.control.TextFormatter;
 
 public class CPDecimalField extends CPTextField {
@@ -10,10 +12,32 @@ public class CPDecimalField extends CPTextField {
     private final TextFormatter<Number> formatter = new TextFormatter<>(converter,
             0, converter.getFilter());
 
+    private DoubleProperty value;
+
     public CPDecimalField() {
+        this(0.00);
+    }
+
+    public CPDecimalField(Double value) {
         super();
 
+        this.value = new SimpleDoubleProperty(value);
+
         setTextFormatter(formatter);
+        textProperty().bindBidirectional(this.value, converter);
+
         getStyleClass().add(STYLE_CLASS);
+    }
+
+    public double getDouble() {
+        return value.get();
+    }
+
+    public DoubleProperty doubleProperty() {
+        return value;
+    }
+
+    public void setDouble(int value) {
+        this.value.set(value);
     }
 }
