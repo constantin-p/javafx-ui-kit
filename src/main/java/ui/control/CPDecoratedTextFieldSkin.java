@@ -89,23 +89,23 @@ public abstract class CPDecoratedTextFieldSkin extends TextFieldSkin {
     }
 
     @Override
-    protected double computePrefWidth(double width, double topInset, double rightInset,
+    protected double computePrefWidth(double height, double topInset, double rightInset,
                                       double bottomInset, double leftInset) {
-        double baseWidth = super.computePrefWidth(width, topInset, rightInset, bottomInset, leftInset);
+        double baseWidth = super.computePrefWidth(height, topInset, rightInset, bottomInset, leftInset);
         double leftDecorationWidth = (leftDecorationStackPane == null)
                 ? 0.0
-                : snapSize(leftDecorationStackPane.prefWidth(width));
+                : snapSize(leftDecorationStackPane.prefWidth(height));
         double rightDecorationWidth = (rightDecorationStackPane == null)
                 ? 0.0
-                : snapSize(rightDecorationStackPane.prefWidth(width));
+                : snapSize(rightDecorationStackPane.prefWidth(height));
 
         return baseWidth + leftDecorationWidth + rightDecorationWidth + leftInset + rightInset;
     }
 
     @Override
-    protected double computePrefHeight(double height, double topInset, double rightInset,
+    protected double computePrefHeight(double width, double topInset, double rightInset,
                                        double bottomInset, double leftInset) {
-        double baseHeight = super.computePrefHeight(height, topInset, rightInset, bottomInset, leftInset);
+        double baseHeight = super.computePrefHeight(width, topInset, rightInset, bottomInset, leftInset);
         double leftDecorationHeight = (leftDecorationStackPane == null)
                 ? 0.0
                 : snapSize(leftDecorationStackPane.prefHeight(- 1));

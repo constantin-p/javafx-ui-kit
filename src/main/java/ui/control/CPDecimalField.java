@@ -29,15 +29,15 @@ public class CPDecimalField extends CPTextField {
         getStyleClass().add(STYLE_CLASS);
     }
 
-    public double getDouble() {
+    public double getValue() {
         return value.get();
     }
 
-    public DoubleProperty doubleProperty() {
+    public DoubleProperty valueProperty() {
         return value;
     }
 
-    public void setDouble(int value) {
+    public void setValue(int value) {
         this.value.set(value);
     }
 }

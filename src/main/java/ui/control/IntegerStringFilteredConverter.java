@@ -21,9 +21,9 @@ public class IntegerStringFilteredConverter extends NumberStringConverter {
                 return change;
             }
 
-            ParsePosition parsePosition = new ParsePosition( 0 );
-            Object object = getNumberFormat().parse( newText, parsePosition );
-            if ( object == null || parsePosition.getIndex() < newText.length()) {
+            ParsePosition parsePosition = new ParsePosition(0);
+            Object object = getNumberFormat().parse(newText, parsePosition);
+            if (object == null || parsePosition.getIndex() < newText.length()) {
                 return null;
             } else {
                 return change;

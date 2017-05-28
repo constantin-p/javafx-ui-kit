@@ -11,12 +11,14 @@
 <?import ui.control.CPIntegerField?>
 <?import ui.control.CPDecimalField?>
 
-<GridPane
-    xmlns:fx="http://javafx.com/fxml"
-    stylesheets="@sample.css"
-    prefHeight="400.0"
-    prefWidth="300.0"
-    hgap="15.0">
+<?import javafx.scene.control.CheckBox?>
+<?import ui.control.CPButton?>
+<GridPane fx:controller="ui.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+          stylesheets="@sample.css"
+          prefHeight="400.0"
+          prefWidth="300.0"
+          hgap="15.0">
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" maxWidth="15.0" minWidth="15.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
@@ -34,6 +36,10 @@
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
         <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
 
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
         <RowConstraints maxHeight="28.0" minHeight="28.0" vgrow="NEVER" />
         <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" vgrow="NEVER" />
@@ -99,6 +105,20 @@
         <CPDecimalField
             GridPane.columnIndex="1"
             GridPane.rowIndex="9" />
+        <CheckBox fx:id="loadingCheckBox"
+            text="CPLoadingButton:"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="10"
+            GridPane.valignment="BOTTOM">
+            <padding>
+                <Insets
+                    bottom="2.0" />
+            </padding>
+        </CheckBox>
+        <CPButton fx:id="loadingCPButton"
+              text="Action"
+              GridPane.columnIndex="1"
+              GridPane.rowIndex="11" />
 
     </children>
 </GridPane>

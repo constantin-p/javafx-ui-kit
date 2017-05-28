@@ -22,7 +22,7 @@ public class DecimalStringFilteredConverter extends NumberStringConverter {
             }
 
             ParsePosition parsePosition = new ParsePosition( 0 );
-            Object object = getNumberFormat().parse( newText, parsePosition );
+            Object object = getNumberFormat().parse(newText, parsePosition);
             if ( object == null || parsePosition.getIndex() < newText.length()) {
                 return null;
             } else {

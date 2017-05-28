@@ -30,15 +30,15 @@ public class CPIntegerField extends CPTextField {
     }
 
 
-    public int getInteger() {
+    public int getValue() {
         return value.get();
     }
 
-    public IntegerProperty integerProperty() {
+    public IntegerProperty valueProperty() {
         return value;
     }
 
-    public void setInteger(int value) {
+    public void setValue(int value) {
         this.value.set(value);
     }
 }
